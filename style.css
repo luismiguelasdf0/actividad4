@@ -1,0 +1,165 @@
+/* Variables para facilitar tus modificaciones de color y tipografía */
+:root {
+  --color-principal: #d97706; /* Modificación propia: color cambiado a tono naranja */
+  --color-fondo: #f8fafc;
+  --color-texto: #1e293b;
+  --fuente-principal: system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* 1. Header y Navegación */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-principal);
+}
+
+/* 2. Sección Principal (Hero) */
+.hero {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--color-principal);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contenedor general para secciones */
+main section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-principal);
+  text-align: center;
+}
+
+/* 3. Sección de Contenido 1 (Tarjetas) */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* 4. Sección de Contenido 2 (Sobre el proyecto con imagen) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-grid img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* 5. Footer */
+footer {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Adaptación a móviles (Responsive) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
