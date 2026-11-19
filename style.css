@@ -1,9 +1,14 @@
-/* Variables para facilitar tus modificaciones de color y tipografía */
+
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
 :root {
-  --color-principal: #d97706; /* Modificación propia: color cambiado a tono naranja */
+  --color-principal: rgb(217, 31, 6); /* Modificación propia: color cambiado a tono naranja */
   --color-fondo: #f8fafc;
   --color-texto: #1e293b;
-  --fuente-principal: system-ui, -apple-system, sans-serif;
+  --fuente-principal: Playfair Display, -apple-system, sans-serif;
 }
 
 * {
@@ -23,7 +28,7 @@ body {
   line-height: 1.6;
 }
 
-/* 1. Header y Navegación */
+
 header {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
@@ -66,7 +71,7 @@ nav {
   color: var(--color-principal);
 }
 
-/* 2. Sección Principal (Hero) */
+
 .hero {
   background-color: var(--color-principal);
   color: #ffffff;
@@ -96,7 +101,7 @@ nav {
   font-weight: bold;
 }
 
-/* Contenedor general para secciones */
+
 main section {
   max-width: 1100px;
   margin: 0 auto;
@@ -110,7 +115,7 @@ h2 {
   text-align: center;
 }
 
-/* 3. Sección de Contenido 1 (Tarjetas) */
+
 .grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -128,7 +133,7 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-/* 4. Sección de Contenido 2 (Sobre el proyecto con imagen) */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -142,7 +147,7 @@ h2 {
   height: auto;
 }
 
-/* 5. Footer */
+
 footer {
   background-color: #1e293b;
   color: #ffffff;
@@ -151,7 +156,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Adaptación a móviles (Responsive) */
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
